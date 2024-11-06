@@ -12,4 +12,9 @@ metadata:
 data:
   repositories: |
     - url: https://github.com/AlexanderRousseeuw/argocd-example-apps
-      username: AlexanderRousseeuw
+      usernameSecret:
+        name: github-creds
+        key: username
+      passwordSecret:
+        name: github-creds
+        key: password
