@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   labels:
-    version: "0"
+    myVersion: "0"
   name: 10-sync-wave
   namespace: argocd
   annotations:
