@@ -10,9 +10,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "0"
 spec:
   template:
-    metadata:
-      labels:
-        version: "0"
     spec:
       serviceAccountName: argocd-server
       containers:
