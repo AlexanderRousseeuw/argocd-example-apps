@@ -14,7 +14,7 @@ spec:
     path: apps
     targetRevision: HEAD
   destination:
-    name: in-cluster
+    name: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
     automated:
@@ -35,7 +35,7 @@ spec:
     targetRevision: HEAD
     path: argocd
   destination:
-    server: in-cluster
+    name: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
     automated: {}
