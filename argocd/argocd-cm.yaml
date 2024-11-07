@@ -7,7 +7,6 @@ metadata:
   name: argocd-cm
   namespace: argocd
 data:
-  streamingConnectionIdleTimeout: "0s"
   repositories: |
     - url: https://github.com/AlexanderRousseeuw/argocd-example-apps
       usernameSecret:
