@@ -3,7 +3,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   labels:
-    version: 0
+    version: "0"
   name: 10-wave-20-sleep
   namespace: argocd
   annotations:
