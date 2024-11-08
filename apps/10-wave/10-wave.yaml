@@ -25,4 +25,4 @@ spec:
             - -c
             - |
               sleep 10
-      restartPolicy: Never
+      restartPolicy: Always
