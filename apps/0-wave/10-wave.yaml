@@ -20,11 +20,19 @@ spec:
     spec:
       serviceAccountName: argocd-server
       containers:
-        - name: sleep
-          image: ubuntu:latest
-          command:
-            - /bin/sh
-            - -c
-            - |
-              sleep infinity
-      restartPolicy: Always
+        - name: example-container
+          image: nginx:latest
+          startupProbe:
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - "sleep 30"
+            failureThreshold: 1   # If the command fails, it retries only once before failing
+            periodSeconds: 5      # The probe runs every 5 seconds
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
