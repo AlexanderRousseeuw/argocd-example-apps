@@ -26,5 +26,5 @@ spec:
             - /bin/sh
             - -c
             - |
-              sleep 10
+              sleep infinity
       restartPolicy: Always
