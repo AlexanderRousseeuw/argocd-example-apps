@@ -1,6 +1,6 @@
 ---
-apiVersion: batch/v1
-kind: Job
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: 10-wave-10-sleep
   namespace: argocd
@@ -8,6 +8,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "10"
     alexander.com/version: "v1"
 spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: 10-wave
   template:
     metadata:
       annotations:
@@ -23,4 +26,3 @@ spec:
             - |
               sleep 10
       restartPolicy: Never
-  backoffLimit: 1
