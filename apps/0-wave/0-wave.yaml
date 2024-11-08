@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-    alexander.com/version: "v4"
+    alexander.com/version: "v5"
 spec:
   selector:
     matchLabels:
@@ -16,7 +16,7 @@ spec:
       labels:
         app.kubernetes.io/name: 0-wave-0-wave
       annotations:
-        alexander.com/version: "v4"
+        alexander.com/version: "v5"
     spec:
       serviceAccountName: argocd-server
       containers:
