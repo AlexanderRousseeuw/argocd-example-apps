@@ -22,14 +22,10 @@ spec:
       containers:
         - name: example-container
           image: nginx:latest
-          startupProbe:
-            exec:
-              command:
-                - /bin/sh
-                - -c
-                - "sleep 30"
-            failureThreshold: 1   # If the command fails, it retries only once before failing
-            periodSeconds: 5      # The probe runs every 5 seconds
+          lifecycle:
+            postStart:
+              exec:
+                command: ["sleep", "30"]
           readinessProbe:
             httpGet:
               path: /
