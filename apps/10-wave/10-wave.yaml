@@ -25,10 +25,10 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["sleep", "30"]
+                command: ["sleep", "10"]
           readinessProbe:
             httpGet:
               path: /
               port: 80
             initialDelaySeconds: 5
-            periodSeconds: 10
+            periodSeconds: 1
