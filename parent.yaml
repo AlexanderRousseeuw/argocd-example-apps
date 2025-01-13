@@ -16,6 +16,8 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
+    syncOptions:
+      - CreateNamespace=true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
