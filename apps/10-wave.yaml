@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "10"
-    alexander.com/version: "v6"
+    alexander.com/version: "v7"
 spec:
   project: default
   source:
